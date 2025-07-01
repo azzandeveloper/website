@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Task Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="./index.html">Task Mangment System</a></div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./task.html">Tasks</a>
+      <button class="login-btn">Login</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="login-form">
+      <h2>Login to your account<span>*</span></h2>
+      <input type="email" id="email" placeholder="enter your email" required />
+      <input type="password" id="password" placeholder="enter your password" required />
+      <p>Don't have an account ? <a href="./sinup.html">Register</a></p>
+      <button onclick="login(event)" type="submit">Login</button>
+    </div>
+  </div>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300&display=swap');
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Josefin Sans';
+    }
+
+    body {
+      background: #fff;
+    }
+  div  a{
+list-style: none;
+font-weight: 600;
+text-decoration: none;
+  color: #7e57c2;
+}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .logo {
+      color: #7e57c2;
+      font-size: 30px;
+      font-weight: 500;
+        font-family: 'Josefin Sans'
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+          font-family: 'Josefin Sans'
+    }
+
+    .login-btn {
+      padding: 9px 19px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .login-form {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-form h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .login-form h2 span {
+      color: red;
+      font-size: 30px;
+       vertical-align: super;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 17px;
+      border-radius: 8px;
+      border: none;
+      background-color: #f5f5f5;
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .login-form p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .login-form p a {
+      color: #7e57c2;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-form button {
+      padding: 13px 27px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    /* 👇 Form entrance animation */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+
+  /* animation part */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* 👇 Heading animation */
+.login-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+/* 👇 Input field animation */
+.login-form input {
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f5f5f5;
+  margin-bottom: 15px;
+  font-size: 17px;
+
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.7s forwards;
+}
+
+/* 👇 Button animation */
+.login-form button {
+  padding: 13px 27px;
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.9s forwards;
+}
+
+/* ✨ Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* 👇 Header entrance */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s ease-out forwards;
+}
+
+/* 👇 Logo animation */
+.logo {
+  color: #7e57c2;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: 'Josefin Sans';
+
+  opacity: 0;
+  animation: fadeInLeft 1s ease-out 0.4s forwards;
+}
+
+/* 👇 Nav links animation */
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: 'Josefin Sans';
+
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* 👇 Nav links stagger effect */
+nav a:nth-child(1) {
+  animation-delay: 0.6s;
+}
+nav a:nth-child(2) {
+  animation-delay: 0.7s;
+}
+nav a:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/* 👇 Login button animation */
+.login-btn {
+  padding: 9px 19px;
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+
+  opacity: 0;
+  animation: fadeInRight 1s ease-out 0.9s forwards;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+  </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./login.js"></script>
+</body>
+</html>

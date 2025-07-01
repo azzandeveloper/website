@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager System</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Task Mangment System</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="./task.html">Tasks</a>
+      <div id="btn">
+
+        <button  class="login-btn"  ><a href="./login.html " style="color: white;">Login</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="main" >
+    <div class="left" >
+      <h1 class="typewriter">The</h1>
+      <h1 class="typewriter-text">Task Manager</h1>
+      <h2>Assignment</h2>
+      <p class="desc">
+        task manager is a managment system with dashboard<br />
+        It was founded in 2025 by Kashan Adnan.
+      </p>
+      <button class="program-btn">
+       <a href="./login.html">  Discover All Programs</a> <span>⏵</span>
+      </button>
+    </div>
+    <div class="right">
+      <img src="image.png" alt="ToDo Illustration" />
+    </div>
+  </div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300&display=swap');
+
+body {
+  font-family: 'Josefin Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  animation: slideDown 1s ease-in-out; /* 👈 animation added */
+}
+
+/* 👇 KEYFRAMES for navbar animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  color: #7e57c2;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.login-btn {
+  background: #7e57c2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7rem 2rem;
+}
+
+.left {
+  max-width: 50%;
+}
+
+.left h1 {
+  font-size: 49px;
+  margin: 0;
+  font-family: 'Josefin Sans';
+}
+
+.left h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+
+.desc {
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.program-btn a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.program-btn {
+  background: #7e57c2;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.program-btn span {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.right img {
+  max-width: 490px;
+  height: auto;
+}
+
+  </style>
+  <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</body>
+</html>

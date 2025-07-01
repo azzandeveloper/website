@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="sidebar">
+        <h2 class="logo"> <a href="../index.html">Task Mangment System</a></h2>
+        <ul>
+            <li><span>📈</span> <a href="">Dashboard</a> </li>
+            <li class="active"><span>✅</span> <a href="./task.html">Tasks</a> </li>
+           
+            <li><span>👤</span> <a href="./profile.html">My Profile</a></li>
+            
+        </ul>
+        <div class="logout">
+            
+            <strong id="logout">↩ Logout</strong>
+        </div>
+    </div>
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./task.html" class="active">Tasks</a>
+            </nav>
+            <div class="user">
+                <img id="image" style="height: 40px; object-fit: cover; width: 40px;" src="" alt="User" />
+                <div id="btn">
+                    <p id="name" style="font-size: 20px;">Kashan Adnan</p>
+                    <small class="online" style="color: rgb(1, 123, 1); cursor: pointer;">● User Account</small>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <section class="todos">
+                <h3>Uncompleted Todos<span>*</span></h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.no</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- New Task + Progress -->
+            <div class="bottom-section">
+                <div class="new-task">
+                    <h3>New Task<span>*</span></h3>
+                    <input type="text" id="task" placeholder="enter your task" />
+                    <input type="text" id="description" placeholder="enter your description" /><br>
+                    <button>Add +</button>
+                </div>
+                <div class="progress">
+                    <div class="circle">80%</div>
+                    <p class="azzan">Todos Complete</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+      display: flex;
+    }
+     ul li a{
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
+    .sidebar {
+      width: 310px;
+      background: #fff;
+      border-right: 2px solid #007BFF;
+      height: 100vh;
+    }
+    .sidebar h2  {
+      padding: 20px;
+      color: #7d4bb2;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar li {
+      padding: 15px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 19px;
+    }
+    .sidebar li:hover {
+      background: #eee8f7;
+     
+    }
+    .sidebar .logout {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+    .logo{
+      font-size: 21px;
+      margin-top: 28px;
+      color: #7e57c2;
+    }
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 310px;
+  background: #fff;
+position: sticky;
+left: 0;
+top: 0;
+  border-right: 1px solid #ddd;
+}
+
+
+.azzan{
+    margin-top: 20px;
+}
+ ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Josefin Sans'
+}
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 2px solid #d9d9d9;
+  
+
+}
+.sidebar h2 a{
+  list-style: none;
+  text-decoration: none;
+font-weight: 900;
+      color: #7d4bb2;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  left: 849px;
+  font-size: 20px;
+}
+
+nav a.active {
+  color: #7e57c2;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.user span {
+  font-size: 12px;
+  color: green;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.todos {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+}
+
+.todos h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+
+.todos h3 span {
+  color: red;
+  vertical-align:sub;
+  font-size: 34px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding-left: 20px;
+}
+
+th {
+  background-color: #7e57c2;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 20px;
+
+  border-radius: 5px 5px 0 0;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+}
+
+/* Bottom section */
+.bottom-section {
+  display: flex;
+  gap: 30px;
+}
+
+.new-task {
+  background: white;
+  padding: 20px;
+  width: 844px;
+ 
+  border-radius: 12px;
+}
+
+.new-task h3 {
+  margin-bottom: 15px;
+  font-size: 27px;
+}
+
+.new-task h3 span {
+  color: red;
+font-size: 34px;
+}
+
+.new-task input {
+  width: 800px;
+  padding: 17px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.new-task button {
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+  padding: 13px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Progress */
+.progress {
+  background: white;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  margin-top: 90px;
+  border-radius: 50%;
+  background: #e0ffe0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin:auto;
+  
+}
+.logout{
+  cursor: pointer;
+}
+</style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./dashboard.js"></script>
+</body>
+
+</html>

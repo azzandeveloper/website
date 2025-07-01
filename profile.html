@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2> <a href="./index.html">Task Mangment System</a></h2>
+      <nav>
+        <ul>
+          <li><span>📊</span> <a href="./dashboard.html"> Dashboard</a> </li>
+          <li><span>✅</span><a href="./task.html"> Tasks</a> </li>
+          <li class="active"><span>👤</span> My Profile</li>
+        </ul>
+      </nav>
+
+      <strong id="logout">↩ Logout</strong>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./task.html" class="active-link">Tasks</a>
+        </nav>
+        <div class="user-info">
+          <img src="" alt="User" id="image1212">
+          <div id="btn">
+         <span id="displayName" style="font-size: 19px; font-weight: 400;">Kashan Adnan</span><br>
+
+            <small style="color: green;">● User Account</small>
+          </div>
+        </div>
+      </header>
+      <section class="profile-section">
+        <div class="profile-photo">
+          <label for="fileInput">
+            <img id="image12" src="/WhatsApp Image 2025-06-23 at 04.02.23_5b5c4f25.jpg" alt="Profile Image">
+            <p>Change<br />your photo</p>
+          </label>
+          <input type="file" id="fileInput" accept="image/*" hidden />
+        </div>
+
+        <form class="profile-form" id="profileForm">
+          <h2>Edit Your Profile<span class="star">*</span></h2>
+          <input type="text" id="name" value="Kashan Adnan" />
+          <input type="email" id="email" value="kashan@gmail.com" />
+          <input type="text" id="idNumber" value="12" />
+          <button type="submit">Edit</button>
+        </form>
+      </section>
+    </main>
+  </div>
+<style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+    }
+    .user-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+   }
+    .sidebar {
+      width: 300px;
+      background: white;
+      padding: 20px;
+      border-right: 2px solid #e0e0e0;
+      height: 100vh;
+      position: relative;
+    }
+
+    .sidebar h2 {
+      color: #6b42c9;
+      margin-bottom: 20px;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+    }
+
+    .sidebar nav ul li {
+      padding: 14px 10px;
+      margin: 10px 0;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li:hover,
+    .sidebar nav ul li.active {
+      background-color: #f3f0ff;
+    }
+    .star{
+      color: red;
+      font-size: 30px;
+    }
+.sidebar h2 a{
+  list-style: none;
+  text-decoration: none;
+   color: #7d4bb2;
+}
+    #logout {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 870px;
+    }
+
+    .header nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    .header .active-link {
+      color: #6b42c9;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-info img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+
+    .profile-photo {
+      text-align: center;
+      margin-right: 40px;
+    }
+
+    .profile-photo img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .profile-photo p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .profile-form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .profile-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .profile-form input {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      background-color: #f2f2f2;
+      border-radius: 6px;
+    }
+
+    .profile-form button {
+      padding: 10px 25px;
+      background-color: #6b42c9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  
+</style>
+
+</body>
+<script src="profile.js"></script>
+</html>
