@@ -88,11 +88,11 @@ addBtn.addEventListener("click", async () => {
 
 document.getElementById("logout").addEventListener("click", function () {
   localStorage.removeItem("user");
-  window.location.href = "/index.html";
+  window.location.href = "./index.html";
   localStorage.clear()
   alert("✅Logged out")
   
-  window.location.href = "../login.html";
+  window.location.href = "./login.html";
 });
 
 const userData = JSON.parse(localStorage.getItem("userData")) || {};

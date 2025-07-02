@@ -97,7 +97,7 @@ async function fetchData() {
 document.getElementById("logout").addEventListener("click", function () {
   localStorage.clear();
   alert("✅Logged out");
-  window.location.href = "../../login.html";
+  window.location.href = "./login.html";
 });
 
 // ✅ Run on page load
